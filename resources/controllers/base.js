@@ -34,7 +34,7 @@ export default class BaseController{
   read(id) {
     var filter = {};
     filter[this.key] = id;
-
+    console.log(id, filter);
     return this.model
     .findOne(filter)
     .then((modelInstance) => {
@@ -110,6 +110,7 @@ export default class BaseController{
     });
 
     router.get("/:key", (req, res) => {
+      console.log(req.params.key);
       this
         .read(req.params.key)
         .then(ok(res))

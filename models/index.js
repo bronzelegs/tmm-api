@@ -1,21 +1,11 @@
 import mongoose from 'mongoose';
 
-const CountrySchema = new mongoose.Schema({
-  isocode: String,
-  name: String,
-  description: String
-});
-
-const CitySchema = new mongoose.Schema({
-  name: String,
-  description: String,
-  country: {type: mongoose.Schema.Types.ObjectId, ref: 'Country'},
-});
 
 
-const LanguageSchema = new mongoose.Schema({
-  isocode: String,
-  name: String
+const HistorySchema = new mongoose.Schema({
+      userId: {type: mongoose.Schema.Types.ObjectId, ref: '_id'},
+      action: String,
+      timeStamp: {type: Date, default: Date.now}
 });
 
 const ProfileSchema = new mongoose.Schema({
@@ -32,9 +22,7 @@ const ProfileSchema = new mongoose.Schema({
   lastAccess: {type: Date, default: Date.now}
 });
 
-const Country  = mongoose.model('Country', CountrySchema);
-const City     = mongoose.model('City', CitySchema);
-const Language = mongoose.model('Language', LanguageSchema);
+const History = mongoose.model('History', HistorySchema);
 const Profile = mongoose.model('Profile', ProfileSchema);
 
-export {Country, City, Language, Profile}
+export { History, Profile}
