@@ -1,7 +1,5 @@
 import { Router } 						from 'express';
-import { CountriesController,
-				 CitiesController,
-			 	 /* LanguagesController,*/
+import {
 			 	 HistoriesController,
 				 ProfilesController
 			 }											from './controllers';
