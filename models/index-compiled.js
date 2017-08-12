@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-exports.Profile = exports.History = undefined;
+exports.Login = exports.Profile = exports.History = undefined;
 
 var _mongoose = require('mongoose');
 
@@ -32,10 +32,20 @@ var ProfileSchema = new _mongoose2.default.Schema({
 	lastAccess: { type: Date, default: Date.now }
 });
 
+var LoginSchema = new _mongoose2.default.Schema({
+	userName: String,
+	action: String,
+	desc: String,
+	address: String,
+	createDate: { type: Date, default: Date.now }
+});
+
 var History = _mongoose2.default.model('History', HistorySchema);
 var Profile = _mongoose2.default.model('Profile', ProfileSchema);
+var Login = _mongoose2.default.model('Login', LoginSchema);
 
 exports.History = History;
 exports.Profile = Profile;
+exports.Login = Login;
 
 //# sourceMappingURL=index-compiled.js.map

@@ -5,6 +5,8 @@ import bodyParser from 'body-parser';
 import db from './db';
 import api from './resources';
 
+var login = require('./resources/controllers/login')
+
 var app = express();
 app.server = http.createServer(app);
 
@@ -18,7 +20,8 @@ app.use(bodyParser.json({
 
 db( _ => {
 	app.use('/', api());
-	app.server.listen(3000);
+	app.use('/login', login);
+	app.server.listen(3100);
 });
 
 export default app;

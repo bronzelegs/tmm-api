@@ -1,9 +1,9 @@
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+	value: true
 });
-exports.ProfilesController = exports.HistoriesController = undefined;
+exports.LoginsController = exports.ProfilesController = exports.HistoriesController = undefined;
 
 var _base = require('./base');
 
@@ -20,27 +20,39 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var HistoriesController = exports.HistoriesController = function (_BaseController) {
-  _inherits(HistoriesController, _BaseController);
+	_inherits(HistoriesController, _BaseController);
 
-  function HistoriesController() {
-    _classCallCheck(this, HistoriesController);
+	function HistoriesController() {
+		_classCallCheck(this, HistoriesController);
 
-    return _possibleConstructorReturn(this, (HistoriesController.__proto__ || Object.getPrototypeOf(HistoriesController)).call(this, _models.History, '_id'));
-  }
+		return _possibleConstructorReturn(this, (HistoriesController.__proto__ || Object.getPrototypeOf(HistoriesController)).call(this, _models.History, '_id'));
+	}
 
-  return HistoriesController;
+	return HistoriesController;
 }(_base2.default);
 
 var ProfilesController = exports.ProfilesController = function (_BaseController2) {
-  _inherits(ProfilesController, _BaseController2);
+	_inherits(ProfilesController, _BaseController2);
 
-  function ProfilesController() {
-    _classCallCheck(this, ProfilesController);
+	function ProfilesController() {
+		_classCallCheck(this, ProfilesController);
 
-    return _possibleConstructorReturn(this, (ProfilesController.__proto__ || Object.getPrototypeOf(ProfilesController)).call(this, _models.Profile, 'userName'));
-  }
+		return _possibleConstructorReturn(this, (ProfilesController.__proto__ || Object.getPrototypeOf(ProfilesController)).call(this, _models.Profile, 'userName'));
+	}
 
-  return ProfilesController;
+	return ProfilesController;
+}(_base2.default);
+
+var LoginsController = exports.LoginsController = function (_BaseController3) {
+	_inherits(LoginsController, _BaseController3);
+
+	function LoginsController() {
+		_classCallCheck(this, LoginsController);
+
+		return _possibleConstructorReturn(this, (LoginsController.__proto__ || Object.getPrototypeOf(LoginsController)).call(this, _models.Login, 'userName'));
+	}
+
+	return LoginsController;
 }(_base2.default);
 
 //# sourceMappingURL=index-compiled.js.map

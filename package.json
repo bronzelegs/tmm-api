@@ -30,6 +30,7 @@
     "log4js": "^0.6.29",
     "mongoose": "^4.2.9",
     "pluralize": "^1.2.1",
+    "q": "^1.5.0",
     "slug": "^0.9.1"
   },
   "devDependencies": {
