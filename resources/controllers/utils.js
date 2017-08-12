@@ -5,7 +5,7 @@ export function ok(res){
   return (data) => {
     res.json(data);
   };
-};
+}
 
 /**
   Depending on the error type, will perform the following:
@@ -20,4 +20,4 @@ export function fail(res){
     console.log(error);
     res.sendStatus(404).end();
   };
-};
+}

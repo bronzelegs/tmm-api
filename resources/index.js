@@ -1,7 +1,6 @@
 import { Router } 						from 'express';
 import {HistoriesController, ProfilesController, LoginsController}	from './controllers';
 
-
 export default function() {
 	var api = Router();
 	api.use('/histories', new HistoriesController().route());

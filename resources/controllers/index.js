@@ -18,7 +18,6 @@ export class ProfilesController extends BaseController {
 export class LoginsController extends BaseController {
 	constructor() {
 		super(Login, 'userName');
-	
 	}
 
 }
